@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC :=mips-linux-gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS := -I..\/include -L..\/lib$/;"	m
+Get_hdr	ctrl.c	/^static const unsigned char Get_hdr[] =$/;"	v	file:
+LIBS	Makefile	/^LIBS := -lm -lpthread -ldml -lssl -lcrypt -liptc -lip4tc -lxtables -liconv -lcrypto -ldl$/;"	m
+Op_hdr	ctrl.c	/^static const unsigned char Op_hdr[] =$/;"	v	file:
+Post_hdr	ctrl.c	/^static const unsigned char Post_hdr[] =$/;"	v	file:
+STRIP	Makefile	/^STRIP :=mips-linux-strip$/;"	m
+g_pass	ctrl.c	/^static char g_pass[32];$/;"	v	file:
+g_sid	ctrl.c	/^static char g_sid[32];$/;"	v	file:
+g_user	ctrl.c	/^static char g_user[32];$/;"	v	file:
+kconn	ctrl.c	/^int kconn(void)$/;"	f	signature:(void)
+kget_path	ctrl.c	/^int kget_path(char *path)$/;"	f	signature:(char *path)
+klogin	ctrl.c	/^int klogin(void)$/;"	f	signature:(void)
+krecv	ctrl.c	/^static int krecv(int )$/;"	f	file:	signature:(int )
+ksend	ctrl.c	/^static int ksend()$/;"	f	file:
+kurl_encode	ctrl.c	/^static void kurl_encode(const char *src, char *dst, size_t dst_len) {$/;"	f	file:	signature:(const char *src, char *dst, size_t dst_len)
+main	conf_merge.c	/^main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+main	conf_praser.c	/^main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+main	ctrl.c	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
+main	wlanuser.c	/^int main()$/;"	f
+nt_wlanuser_handler	wlanuser.c	/^int nt_wlanuser_handler(evt_info *ei)$/;"	f	signature:(evt_info *ei)
+usage	conf_merge.c	/^usage()$/;"	f
+usage	conf_praser.c	/^usage()$/;"	f
