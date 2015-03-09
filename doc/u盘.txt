@@ -1,0 +1,22 @@
+u盘加载目录：
+可以通过mount命令来查看
+在mount命令的输出中，查找 /dev/sd开头的记录
+例如：
+rootfs on / type rootfs (rw)
+/dev/root on /rom type squashfs (ro,relatime)
+proc on /proc type proc (rw,relatime)
+/dev/mtdblock4 on /overlay type jffs2 (rw,relatime)
+mini_fo:/overlay on / type mini_fo (rw,noatime)
+/dev/mtdblock5 on /home type jffs2 (rw,relatime)
+shm on /dev/shm type tmpfs (rw,relatime)
+usbfs on /proc/bus/usb type usbfs (rw,noatime)
+devpts on /dev/pts type devpts (rw,noatime,mode=600)
+tmpfs on /tmp type tmpfs (rw,noatime)
+sysfs on /sys type sysfs (rw,noatime)
+mdev on /dev type tmpfs (rw,relatime,size=512k,mode=755)
+devpts on /dev/pts type devpts (rw,relatime,mode=600)
+mnt on /mnt type tmpfs (rw,relatime,size=128k,mode=755)
+/dev/sda1 on /mnt/sda1 type vfat (rw,noatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=cp437,iocharset=iso8859-1,errors=remount-ro)
+
+
+最后一行，表明u盘加载，自动挂载到系统的/mnt/sda1目录.
