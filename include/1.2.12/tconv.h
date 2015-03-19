@@ -127,4 +127,6 @@ tc_range2i(const char *str, int *start, int *end);
 
 #define tc_str2enum2(ss, s) tc_str2enum(ss, sizeof(ss)/sizeof(*ss), 1, s)
 
+char *urlencode(char *str);
+
 #endif /* _TCONV_H_ */

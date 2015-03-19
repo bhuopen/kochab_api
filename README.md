@@ -31,8 +31,17 @@ kochab api for third-party developers
 5. 在当前目录，执行以下命令，该命令自动编译example目录的c文件，并重新制作新的rootfs文件
     make TG=1.2.10 IMG=fw.img
 6. 新制作的rootfs文件为build/fw.img.part/rootfs.new
-7. 把各个文件提交到BHU提供的在线固件制作页面，通过页面，重新打包为一个新的固件。
+7. 把各个文件提交到BHU提供的在线固件制作页面http://61.149.47.34:81/，通过页面，重新打包为一个新的固件。
    分区名称，就是对应的分区文件名。（只有rootfs.new, 打包时，指定的分区名称应为rootfs)
 8. 系统内的固件升级接口，参看doc目录下相关文件.
+
+
+example说明
+conf_merge.c 两个xml格式文档合并的例子，(利用设备自带的xml操作库)
+conf_praser.c xml解析例子(利用设备自带的xml操作库), 解析xml并打印解析获得的结果
+ctrl.c 一个封装了http操作的c程序，可以在设备上和PC上运行。演示了如何查询，修改设备配置。
+wlanuser.c 演示如何获取系统的事件消息。
+CgiOpr.py 通过python控制设备的演示例子（未包含在Makefile中，需要Phtyon运行环境)
+
 
 
