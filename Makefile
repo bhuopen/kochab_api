@@ -1,3 +1,9 @@
+
+ifneq ($(USER), root)
+$(error "Need user root to run this!")
+endif
+
+
 ifndef TG
 $(error "Please define TG (version)")
 endif
