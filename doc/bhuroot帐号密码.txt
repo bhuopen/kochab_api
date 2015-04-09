@@ -1,0 +1,14 @@
+后续固件版本的bhuroot帐号不考虑对外开放，所以bhu提供了修改bhuroot密码的方法。步骤如下
+
+1. 解压出来的rootfs目录中, 建立/etc/rpasswd文件，里面包含如下一行
+    bhuroot:74357fa178c1a68b11f43c816ab90e40:0:0:root:/root:/bin/sh
+    第一个和第二个冒号之间的，是bhuroot的密码(加密后的密文)
+
+2. 如过不需要密码，把两个冒号之间的内容删空
+
+3. 如果需要修改密码，可以登录设备web页面，修改admin帐号的密码，然后导出设备配置文件，查看dev.sys.users表,有如下表项 
+    <ITEM name="admin" password_enc="712663a0a3f935835013ed1e524b2292" auth="admin" systempwd="vYjnD3yXbiKgU" />
+    其中password_enc就是加密后的密码。把此密文复制到rpasswd文件中第一二个冒号之间。
+
+4. 重新制作固件后，新固件将修改bhuroot帐号的密码为新密码
+

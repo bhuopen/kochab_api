@@ -9,9 +9,9 @@ kochab api for third-party developers
 
 
 开发环境准备
-1. 下载交叉编译包， 放入/opt目录
+1. 下载交叉编译包， http://pan.baidu.com/s/1dDF7Crv ,   放入/opt目录
 2. 解压交叉编译包，确保目录结构为 /opt/mips_linux_74k
-3. apt-get install make gcc g++ bison flex gettext patch
+3. apt-get install make gcc g++ bison flex gettext patch (执行编译的过程中看缺啥补啥)
 4. 执行以下命令，编译交叉工具
     cd /opt/mips_linux_74k
     ./build_gcc ap123
@@ -44,4 +44,6 @@ wlanuser.c 演示如何获取系统的事件消息。
 CgiOpr.py 通过python控制设备的演示例子（未包含在Makefile中，需要Phtyon运行环境)
 
 
+
+修改bhuroot帐号密码，参见doc目录下的《bhuroot帐号密码.txt》
 
