@@ -33,6 +33,7 @@ kochab api for third-party developers
 6. 新制作的rootfs文件为build/fw.img.part/rootfs.new
 7. 把各个文件提交到BHU提供的在线固件制作页面http://61.149.47.34:81/，通过页面，重新打包为一个新的固件。
    分区名称，就是对应的分区文件名。（只有rootfs.new, 打包时，指定的分区名称应为rootfs)
+   如果原始固件中包含分区Script,那么打包时必须把Script放在第一个分区
 8. 系统内的固件升级接口，参看doc目录下相关文件.
 
 
