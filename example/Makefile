@@ -17,7 +17,7 @@ endif
 CC :=mips-linux-gcc
 STRIP :=mips-linux-strip
 
-CFLAGS := -I$(INC_DIR) -L../lib
+CFLAGS := -I$(INC_DIR) -L../lib -DLOCK_DEBUG
 LIBS := -lm -lpthread -ldml -lssl -lcrypt -liptc -lip4tc -lxtables -liconv -lcrypto -ldl
 
 ALL_OBJ := wlanuser conf_merge conf_praser ctrl
