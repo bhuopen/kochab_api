@@ -15,6 +15,7 @@ kochab api for third-party developers
 4. 执行以下命令，编译交叉工具
     cd /opt/mips_linux_74k
     ./build_gcc ap123
+5. 确保kochab_api全部存储在linux本地目录（非vmware中挂载的其他系统的共享目录), 否则会引起rootfs制作异常
 
 
 
