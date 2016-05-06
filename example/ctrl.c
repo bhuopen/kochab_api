@@ -250,7 +250,7 @@ static struct http_response * khttp_talk(char *buf, int len, int tm)
     ksock_timeout(g_fd, tm);
 //printf("sending:[\n%s\n]\n", buf);
     if(ksend(buf, len) < 0)
-        return NULL;
+        goto fail;
     if(!(resp = (struct http_response*)malloc(sizeof(*resp)))){
         fprintf(stderr, "oom\n");
         goto fail;
@@ -281,6 +281,10 @@ static struct http_response * khttp_talk(char *buf, int len, int tm)
     if(kprase_http_response(resp)){
         fprintf(stderr, "http response prase error\n");
         goto fail;
+    }
+    if(g_fd != -1){
+        close(g_fd);
+        g_fd = -1;
     }
     return resp;
 fail:
